@@ -1,0 +1,9 @@
+.photoBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  border: 1px solid black;
+  min-height: 100vh;
+}

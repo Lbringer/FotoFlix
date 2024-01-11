@@ -1,0 +1,73 @@
+.cardCon {
+  height: 20vw;
+  width: 20vw;
+  margin: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.disImg {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  height: 100%;
+  transition: all 0.5s;
+}
+.cardCon:hover .disImg {
+  border-radius: 10px 10px 0 0;
+  height: 40%;
+}
+
+.cover {
+  height: 0;
+  width: 0;
+  background: none;
+  border-radius: none;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.cardCon:hover .cover {
+  height: 60%;
+  width: 100%;
+  background-color: rgb(21, 25, 36);
+  border-radius: 0 0 10px 10px;
+  opacity: 1;
+  color: white;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+
+.row {
+  width: 100%;
+  height: 30%;
+  /* border: 1px solid white; */
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5w;
+}
+
+.icon_pack {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  height: 50%;
+  cursor: pointer;
+}
+.likes {
+  margin-left: 0.3vw;
+}
+
+.profile-img {
+  border-radius: 100%;
+  width: 60%;
+}
+.last {
+  margin-top: 2vh;
+}

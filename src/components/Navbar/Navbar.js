@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ handleSearch }) => {
+  const [text, setText] = useState("");
   const navigate = useNavigate();
   const handleFav = () => {
     navigate("/fav");
@@ -14,15 +15,21 @@ const Navbar = () => {
           <span className="italic">Foto</span>Flix
         </div>
       </Link>
-      <form action="#">
-        <input type="text" className="input" placeholder="Search photo" />
+      <form onSubmit={(e) => handleSearch(e, text)}>
+        <input
+          type="text"
+          className="input"
+          placeholder="Search photo"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
         <button type="submit" className="searchBtn">
-          <img src="./search (1).svg" alt="search" />
+          <img src="./icons/search (1).svg" alt="search" />
         </button>
       </form>
       <div className="imgCon">
         <img
-          src="./heart-fill.svg"
+          src="./icons/heart-fill.svg"
           alt="fav"
           className="favImg"
           onClick={handleFav}
